@@ -1,0 +1,153 @@
+.filter {
+  @include container;
+
+  margin-top: 50px;
+
+  h2 {
+    font-family: $font;
+    font-size: 24px;
+    line-height: 120%;
+    color: $black;
+  }
+
+  input {
+    padding: 13px 16px;
+    font-family: $font;
+    font-size: 14px;
+    line-height: 120%;
+    color: $darkGray;
+
+    border: 1px solid $gray;
+    margin-top: 24px;
+
+    @media screen and (max-width: 425px) {
+      padding: 8px 6px;
+      font-size: 12px;
+    }
+  }
+
+  button {
+    background: $blue;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: $white;
+    padding: 13px 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $darkBlue;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      padding: 9px 6px;
+      font-size: 12px;
+    }
+  }
+}
+
+.test {
+  @include container;
+
+  margin-top: 30px;
+
+  h1 {
+    font-family: $font;
+    font-size: 30px;
+    line-height: 120%;
+    color: $black;
+  }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 24px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 375px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.post {
+  $this: &;
+
+  width: 100%;
+  padding: 20px 25px;
+  box-shadow: 0px 5px 10px 2px rgba(119, 122, 124, 0.2);
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all ease-in-out 0.3s;
+
+  &__title {
+    font-family: $font;
+    font-size: 24px;
+    line-height: 120%;
+    color: $black;
+
+    flex: 0 0 auto;
+    height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+
+    transition: all ease-in-out 0.3s;
+  }
+
+  &__text {
+    margin-top: 20px;
+    flex: 1 0 auto;
+
+    font-family: $font;
+    font-size: 18px;
+    line-height: 120%;
+    color: $black;
+
+    transition: all ease-in-out 0.3s;
+  }
+
+  &__select {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    width: fit-content;
+    flex: 0 0 auto;
+
+    font-family: $font;
+    font-size: 18px;
+    line-height: 120%;
+    color: $black;
+    cursor: pointer;
+
+    transition: all ease-in-out 0.3s;
+
+    input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+
+  &--black {
+    background-color: $brown;
+
+    #{$this}__title,
+    #{$this}__text,
+    #{$this}__select {
+      color: $white;
+    }
+  }
+}

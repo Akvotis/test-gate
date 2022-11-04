@@ -1,0 +1,94 @@
+@import "../utils/colors.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+dd,
+dt {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $font;
+  font-size: 16px;
+  color: $black;
+  height: 100%;
+  min-height: 100vh;
+  background: $white;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+.lock {
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 17px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  transition: 0.3s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  padding: 0;
+  border-style: solid;
+  border: none;
+}
+
+svg {
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+p {
+  margin: 0;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

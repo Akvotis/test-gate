@@ -1,0 +1,12 @@
+extends ../common/layout
+
+block content
+    main
+        form.filter.js-filter(action="")
+            h2 Фильтр по заголовкам
+            input(type="text" name="titlePost" placeholder="Введите заголовок поста...")
+            button(type="submit") найти 
+            button.js-reset(type="reset") сбросить
+        section.test
+            h1 Все посты
+            .js-root

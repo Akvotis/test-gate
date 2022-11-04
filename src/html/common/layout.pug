@@ -1,0 +1,27 @@
+include ../mixins/svg
+
+doctype html
+html(lang="ru")
+    block head
+        head
+            style(type="text/css").
+
+            meta(charset="utf-8")
+            title Gate31
+            meta(name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0")
+            meta(name="apple-mobile-web-app-capable" content="yes")
+            meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            link(rel="preload" href="scripts/libs.min.js" as="script")
+            link(rel="preload" href="scripts/main.min.js" as="script")
+            link(rel="preload" href="styles/style.min.css" as="style")
+            link(rel="stylesheet" href="styles/style.min.css")
+            noscript 
+                link(rel="stylesheet" href="css/style.min.css")
+    body
+
+        block content
+
+        block scripts
+            script(src='scripts/libs.min.js' defer)
+            script(src='scripts/main.min.js' defer)
