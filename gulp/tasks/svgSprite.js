@@ -28,13 +28,7 @@ export const svgSprite = () => {
         .pipe(sprite({
             mode: {
                 symbol: {
-                    sprite: 'symbol.svg',
-                    render: {
-                        scss: {
-                            dest: '../../../src/styles/_symbol.scss',
-                            template: './src/styles/templates/_sprite_template.scss'
-                        }
-                    }
+                    sprite: 'symbol.svg'
                 }
             }
         }))
